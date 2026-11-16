@@ -1,0 +1,138 @@
+/* AT BUILDS INSPIRED INTRO */
+
+#about.reference-intro {
+  position: relative;
+  width: 100%;
+  min-height: 850px;
+  background: #050505;
+  color: #ededed;
+  padding: 90px 8% 110px;
+  overflow: hidden;
+}
+
+#about .reference-intro-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(45px, 7vw, 130px);
+  align-items: end;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+#about .reference-intro-portrait {
+  height: 660px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+}
+
+#about .reference-intro-placeholder {
+  width: 80%;
+  height: 520px;
+  border: 1px solid #222;
+  border-radius: 260px 260px 12px 12px;
+  background: linear-gradient(160deg, #161616, #080808 70%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+#about .reference-intro-placeholder > span {
+  font-size: clamp(100px, 12vw, 190px);
+  font-weight: 800;
+  letter-spacing: -0.12em;
+  background: linear-gradient(#e6e6e9, #575760);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#about .reference-intro-placeholder small {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #888;
+}
+
+#about .reference-intro-right {
+  min-width: 0;
+}
+
+#about .reference-intro-title {
+  margin: 0 0 28px;
+  font-size: clamp(100px, 11vw, 195px);
+  font-weight: 850;
+  letter-spacing: -0.09em;
+  line-height: 1;
+  background: linear-gradient(180deg, #f1f1f5 20%, #a8a8b1 55%, #555560 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#about .reference-intro-card {
+  border: 1px solid #242424;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #151515, #0b0b0b);
+  padding: clamp(28px, 4vw, 52px);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.2);
+}
+
+#about .reference-intro-card p {
+  margin: 0 0 22px;
+  color: #a8a8ae;
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.85;
+}
+
+#about .reference-intro-card strong {
+  color: #f1f1f1;
+  font-weight: 700;
+}
+
+#about .reference-intro-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 12px;
+  color: #d7ff62;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+#about .reference-intro-link span {
+  font-size: 21px;
+  transition: transform .3s;
+}
+
+#about .reference-intro-link:hover span {
+  transform: translate(5px, -5px);
+}
+
+@media (max-width: 900px) {
+  #about.reference-intro {
+    padding: 75px 6%;
+  }
+
+  #about .reference-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  #about .reference-intro-portrait {
+    height: 300px;
+  }
+
+  #about .reference-intro-placeholder {
+    height: 280px;
+    width: 240px;
+  }
+
+  #about .reference-intro-title {
+    font-size: clamp(90px, 18vw, 150px);
+  }
+}

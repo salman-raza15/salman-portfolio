@@ -1,0 +1,61 @@
+
+/* PORTFOLIO HERO PORTRAIT */
+
+#home.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+#home .hero-title {
+  position: relative;
+  z-index: 1;
+}
+
+#home .hero-portrait {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 0;
+  width: clamp(300px, 38vw, 570px);
+  height: 85%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#home .hero-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: contrast(1.04);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 80%,
+    transparent 100%
+  );
+}
+
+#home .hero-top,
+#home .hero-content,
+#home .hero-bottom {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  #home .hero-portrait {
+    width: 80vw;
+    height: 68%;
+    opacity: 0.9;
+  }
+}

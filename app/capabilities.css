@@ -1,0 +1,206 @@
+/* WHAT I CAN DO SECTION V1 */
+
+#capabilities {
+  background: #080909;
+  color: #f3f3ef;
+  padding: 120px clamp(24px, 6vw, 110px) 90px;
+}
+
+#capabilities .capabilities-heading-area {
+  min-height: 310px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+#capabilities .capabilities-eyebrow {
+  color: #92978e;
+  font-size: 11px;
+  letter-spacing: .16em;
+  margin-bottom: 15px;
+}
+
+#capabilities h2 {
+  margin: 0;
+  font-size: clamp(70px, 10vw, 160px);
+  line-height: .83;
+  letter-spacing: -.085em;
+  font-weight: 800;
+  text-align: right;
+}
+
+#capabilities h2 span {
+  background: linear-gradient(180deg, #f5f5f3, #92929b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#capabilities .capabilities-list {
+  border-top: 1px solid #30322f;
+}
+
+#capabilities .capability-item {
+  border-bottom: 1px solid #30322f;
+}
+
+#capabilities .capability-item summary {
+  display: grid;
+  grid-template-columns: 85px 1fr 40px;
+  align-items: center;
+  gap: 25px;
+  min-height: 95px;
+  cursor: pointer;
+  list-style: none;
+  transition: padding .3s ease, color .3s ease;
+}
+
+#capabilities .capability-item summary::-webkit-details-marker {
+  display: none;
+}
+
+#capabilities .capability-number {
+  font-size: 17px;
+  color: #ddd;
+}
+
+#capabilities .capability-title {
+  font-size: clamp(17px, 2vw, 26px);
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+
+#capabilities .capability-arrow {
+  font-size: 26px;
+  color: #c7ff3c;
+  transition: transform .3s ease;
+}
+
+#capabilities .capability-item[open] .capability-arrow {
+  transform: rotate(45deg);
+}
+
+#capabilities .capability-details {
+  padding: 0 60px 32px 110px;
+  color: #aeb5a8;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+#capabilities .capability-item:hover summary {
+  padding-left: 10px;
+  color: #c7ff3c;
+}
+
+@media (max-width: 700px) {
+  #capabilities {
+    padding: 85px 22px 70px;
+  }
+
+  #capabilities .capabilities-heading-area {
+    min-height: 220px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  #capabilities h2 {
+    font-size: clamp(62px, 13vw, 100px);
+    text-align: left;
+  }
+
+  #capabilities .capability-item summary {
+    grid-template-columns: 35px 1fr 25px;
+    gap: 12px;
+    min-height: 85px;
+  }
+
+  #capabilities .capability-title {
+    font-size: 17px;
+  }
+
+  #capabilities .capability-details {
+    padding: 0 15px 25px 47px;
+    font-size: 13px;
+  }
+}
+
+
+/* PREMIUM ACCORDION INTERACTIONS */
+
+#capabilities {
+  --accordion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Smooth expansion for native details dropdowns */
+#capabilities details::details-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    height 650ms var(--accordion-ease),
+    opacity 450ms ease,
+    content-visibility 650ms allow-discrete;
+}
+
+#capabilities details[open]::details-content {
+  height: auto;
+  opacity: 1;
+}
+
+/* Hover animation */
+#capabilities summary {
+  transition:
+    color 350ms ease,
+    padding-left 450ms var(--accordion-ease);
+}
+
+#capabilities summary:hover {
+  padding-left: 12px;
+}
+
+/* Arrow animation */
+#capabilities summary svg,
+#capabilities summary .arrow {
+  transition:
+    transform 550ms var(--accordion-ease),
+    color 350ms ease;
+}
+
+#capabilities details[open] summary svg,
+#capabilities details[open] summary .arrow {
+  transform: rotate(45deg);
+}
+
+/* Reveal dropdown content */
+@keyframes capabilityContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+#capabilities details[open] > :not(summary) {
+  animation: capabilityContentReveal 650ms var(--accordion-ease) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #capabilities details::details-content,
+  #capabilities summary,
+  #capabilities summary svg,
+  #capabilities summary .arrow {
+    transition: none;
+  }
+
+  #capabilities details[open] > :not(summary) {
+    animation: none;
+  }
+}

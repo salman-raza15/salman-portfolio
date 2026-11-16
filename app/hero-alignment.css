@@ -1,0 +1,138 @@
+
+/* REFERENCE STYLE HERO */
+
+#home.hero {
+  position: relative !important;
+  height: 100svh !important;
+  min-height: 720px !important;
+  overflow: hidden !important;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 65%, #131613 0%, #080909 65%) !important;
+}
+
+/* Subtle orbital circles */
+#home.hero::before {
+  content: "";
+  position: absolute;
+  width: min(75vw, 1050px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(190, 255, 40, 0.07);
+  border-radius: 50%;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  box-shadow:
+    0 0 0 115px rgba(190,255,40,0.012),
+    0 0 0 230px rgba(190,255,40,0.008);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Portfolio text */
+#home .hero-title {
+  position: absolute !important;
+  top: 48% !important;
+  left: 50% !important;
+  width: 100% !important;
+  max-width: 1450px !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+  text-align: center !important;
+  z-index: 2 !important;
+  pointer-events: none;
+}
+
+#home .hero-title-inner {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+}
+
+/* Portrait in front of text */
+#home .hero-portrait,
+#home .hero-person,
+#home .hero-image {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 0 !important;
+  height: 70% !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: bottom center !important;
+  transform: translateX(-50%) !important;
+  z-index: 3 !important;
+  pointer-events: none;
+}
+
+/* Software developer info at bottom-left */
+#home .hero-content {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 15% !important;
+  left: 6% !important;
+  right: auto !important;
+  width: 310px !important;
+  max-width: 28% !important;
+  z-index: 4 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#home .hero-content h2 {
+  font-size: clamp(24px, 2.5vw, 40px) !important;
+  line-height: 1.08 !important;
+}
+
+#home .hero-content .description {
+  font-size: 12px !important;
+}
+
+/* Move scroll footer out of portrait area */
+#home .hero-bottom {
+  position: absolute !important;
+  bottom: 22px !important;
+  left: 6% !important;
+  right: 6% !important;
+  z-index: 5 !important;
+}
+
+/* Header information */
+#home .hero-top {
+  position: absolute !important;
+  top: 95px !important;
+  left: 6% !important;
+  right: 6% !important;
+  z-index: 4 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #home.hero {
+    min-height: 650px !important;
+  }
+
+  #home .hero-title {
+    top: 43% !important;
+  }
+
+  #home .hero-portrait,
+  #home .hero-person,
+  #home .hero-image {
+    height: 57% !important;
+  }
+
+  #home .hero-content {
+    bottom: 9% !important;
+    left: 5% !important;
+    max-width: 50% !important;
+  }
+
+  #home .hero-content h2 {
+    font-size: 22px !important;
+  }
+}
