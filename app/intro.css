@@ -136,3 +136,9 @@
     font-size: clamp(90px, 18vw, 150px);
   }
 }
+
+/* INTRO HEADING UPPERCASE */
+.intro-section h2,
+.intro-section .intro-title {
+  text-transform: uppercase !important;
+}

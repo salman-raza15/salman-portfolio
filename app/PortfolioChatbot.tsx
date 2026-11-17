@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 type Message = {
   role: "bot" | "user";
@@ -46,6 +47,7 @@ function getReply(question: string): string {
 }
 
 export default function PortfolioChatbot() {
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([
@@ -56,6 +58,10 @@ export default function PortfolioChatbot() {
   ]);
 
   const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (open) {
@@ -79,7 +85,9 @@ export default function PortfolioChatbot() {
     setInput("");
   }
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <div className="portfolio-chatbot">
       {open && (
         <section
@@ -155,6 +163,7 @@ export default function PortfolioChatbot() {
       >
         {open ? "×" : "✳"}
       </button>
-    </div>
+    </div>,
+    document.body
   );
 }

@@ -210,3 +210,39 @@
     transition: none;
   }
 }
+
+
+/* CHATBOT DESKTOP + MOBILE VISIBILITY FIX */
+
+.portfolio-chatbot {
+  position: fixed !important;
+  right: 28px !important;
+  bottom: 105px !important;
+  z-index: 2147483000 !important;
+  isolation: isolate;
+}
+
+.chatbot-panel {
+  right: 0 !important;
+  bottom: 70px !important;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 110px);
+}
+
+@media (max-width: 600px) {
+  .portfolio-chatbot {
+    right: 16px !important;
+    bottom: 100px !important;
+  }
+
+  .chatbot-launcher {
+    width: 52px;
+    height: 52px;
+  }
+
+  .chatbot-panel {
+    width: min(365px, calc(100vw - 32px));
+    height: min(500px, calc(100dvh - 125px));
+    bottom: 65px !important;
+  }
+}

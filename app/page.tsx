@@ -230,7 +230,7 @@ export default function Home() {
     </div>
 
     <div className="reference-intro-right">
-      <h2 className="reference-intro-title">Intro</h2>
+      <h2 className="reference-intro-title">INTRO</h2>
 
       <div className="reference-intro-card">
         <p>

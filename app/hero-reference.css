@@ -193,34 +193,7 @@
   color: #080909;
 }
 
-@media (max-width: 768px) {
-  #home.hero.hero-reference {
-    min-height: 620px !important;
-  }
 
-  #home.hero-reference .hero-title-inner {
-    font-size: 12vw !important;
-  }
-
-  #home.hero-reference .hero-portrait {
-    height: 62% !important;
-  }
-
-  #home.hero-reference .hero-content {
-    left: 5% !important;
-    right: 5% !important;
-    width: 90% !important;
-    bottom: 12% !important;
-  }
-
-  #home.hero-reference .hero-reference-role h2 {
-    font-size: 18px !important;
-  }
-
-  #home.hero-reference .hero-reference-contact {
-    padding: 10px 15px;
-  }
-}
 
 
 /* FULLSCREEN HERO + RELOAD ANIMATION V2 */
@@ -337,24 +310,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  #home.hero.hero-reference {
-    height: 100svh !important;
-    min-height: 580px !important;
-  }
 
-  #home.hero-reference .hero-title-inner {
-    font-size: 12.5vw !important;
-  }
-
-  #home.hero-reference .hero-portrait {
-    height: 65% !important;
-  }
-
-  #home.hero-reference .hero-content {
-    bottom: 10% !important;
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   #home.hero-reference .hero-letter,
@@ -506,4 +462,84 @@
 #home.hero-reference .hero-title-inner,
 #home.hero-reference .hero-portrait img {
   animation: none !important;
+}
+
+
+/* MOBILE HERO — PHOTO ABOVE CONTENT */
+@media (max-width: 768px) {
+  #home.hero.hero-reference {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: minmax(460px, 1fr) auto !important;
+    height: auto !important;
+    min-height: 100svh !important;
+    padding: 75px 0 0 !important;
+    overflow: hidden !important;
+  }
+
+  #home.hero-reference .hero-title {
+    top: 38% !important;
+    z-index: 1 !important;
+  }
+
+  #home.hero-reference .hero-title-inner {
+    font-size: clamp(37px, 11vw, 85px) !important;
+  }
+
+  #home.hero-reference .hero-portrait {
+    position: relative !important;
+    grid-row: 1 !important;
+    align-self: end !important;
+    justify-self: center !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    height: 430px !important;
+    margin: 0 !important;
+    z-index: 2 !important;
+  }
+
+  #home.hero-reference .hero-portrait img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+
+  #home.hero-reference .hero-content {
+    position: relative !important;
+    grid-row: 2 !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 24px 22px 95px !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+    background: #080909 !important;
+    z-index: 5 !important;
+  }
+
+  #home.hero-reference .hero-reference-role h2 {
+    font-size: 23px !important;
+    white-space: normal !important;
+  }
+
+  #home.hero-reference .hero-reference-role p {
+    margin-top: 7px !important;
+  }
+
+  #home.hero-reference .hero-reference-actions {
+    display: flex !important;
+    gap: 12px !important;
+  }
 }
