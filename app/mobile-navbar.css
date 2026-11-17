@@ -1,0 +1,35 @@
+
+@media (max-width: 768px) {
+  main.portfolio > nav.navbar {
+    height: auto !important;
+    min-height: 112px !important;
+    padding: 14px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 14px !important;
+  }
+
+  main.portfolio > nav.navbar .brand {
+    font-size: 23px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  main.portfolio > nav.navbar .nav-links {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+
+  main.portfolio > nav.navbar .nav-links a {
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  main.portfolio > nav.navbar .contact-link {
+    display: none !important;
+  }
+}

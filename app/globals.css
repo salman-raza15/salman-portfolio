@@ -1794,3 +1794,54 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
+
+/* MOBILE NAVBAR — CLEAN TWO ROW LAYOUT */
+@media (max-width: 768px) {
+  .portfolio > .navbar {
+    height: auto !important;
+    min-height: 108px !important;
+    padding: 12px 20px 13px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 13px !important;
+  }
+
+  .portfolio > .navbar .brand {
+    font-size: 22px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1px !important;
+    white-space: nowrap !important;
+  }
+
+  .portfolio > .navbar .nav-links {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+
+  .portfolio > .navbar .nav-links a {
+    font-size: 10px !important;
+    letter-spacing: 1px !important;
+    white-space: nowrap !important;
+  }
+
+  .portfolio > .navbar .contact-link {
+    display: none !important;
+  }
+
+  #home.hero.hero-reference {
+    padding-top: 108px !important;
+  }
+
+  html {
+    scroll-padding-top: 120px !important;
+  }
+
+  section[id] {
+    scroll-margin-top: 120px !important;
+  }
+}

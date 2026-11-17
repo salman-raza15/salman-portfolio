@@ -142,3 +142,36 @@
 .intro-section .intro-title {
   text-transform: uppercase !important;
 }
+
+
+/* INTRO PHOTO SIZE FIX */
+@media (min-width: 769px) {
+  #about .reference-intro-placeholder {
+    overflow: hidden;
+  }
+
+  #about .reference-intro-placeholder img.about-card-photo {
+    transform: scale(1.35);
+    transform-origin: center bottom;
+  }
+
+  #about .reference-intro-placeholder small {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+/* INTRO PHOTO CARD ALIGNMENT */
+@media (min-width: 1025px) {
+  #about .reference-intro-portrait {
+    height: auto;
+    align-self: stretch;
+    align-items: flex-start;
+    padding-top: clamp(100px, 11vw, 195px);
+  }
+
+  #about .reference-intro-placeholder {
+    margin-top: 28px;
+  }
+}
