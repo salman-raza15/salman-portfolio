@@ -478,12 +478,12 @@
   }
 
   #home.hero-reference .hero-title {
-    top: 38% !important;
+    top: 37% !important;
     z-index: 1 !important;
   }
 
   #home.hero-reference .hero-title-inner {
-    font-size: clamp(37px, 11vw, 85px) !important;
+    font-size: clamp(54px, 16vw, 110px) !important;
   }
 
   #home.hero-reference .hero-portrait {
@@ -496,8 +496,9 @@
     top: auto !important;
     bottom: auto !important;
     transform: none !important;
-    width: 100% !important;
+    width: 120% !important;
     height: 430px !important;
+    opacity: 1 !important;
     margin: 0 !important;
     z-index: 2 !important;
   }
@@ -507,6 +508,13 @@
     height: 100% !important;
     object-fit: contain !important;
     object-position: center bottom !important;
+    opacity: 1 !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    mix-blend-mode: normal !important;
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
   }
 
   #home.hero-reference .hero-content {

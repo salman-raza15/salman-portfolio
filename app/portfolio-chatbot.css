@@ -217,7 +217,7 @@
 .portfolio-chatbot {
   position: fixed !important;
   right: 28px !important;
-  bottom: 105px !important;
+  bottom: 55px !important;
   z-index: 2147483000 !important;
   isolation: isolate;
 }
@@ -232,7 +232,7 @@
 @media (max-width: 600px) {
   .portfolio-chatbot {
     right: 16px !important;
-    bottom: 100px !important;
+    bottom: 55px !important;
   }
 
   .chatbot-launcher {
